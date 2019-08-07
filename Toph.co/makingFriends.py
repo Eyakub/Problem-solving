@@ -1,0 +1,2 @@
+def makingFriends(n):
+    pass

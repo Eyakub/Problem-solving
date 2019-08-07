@@ -6,6 +6,7 @@ ehthumbs.db
 *.h
 *.o
 *.exe
+*.out
 
 # Folder config file
 Desktop.ini
