@@ -1,14 +1,10 @@
-def insertList(arr):
-    arr = [int(i) for i in arr]
-    print(arr)
+def insertList(a1, a2):
+    return res.insert(a1, a2)
 
 def removeList(arr):
     pass
 
 def popList(arr):
-    pass
-
-def displayList(arr):
     pass
 
 def sortList(arr):
@@ -20,15 +16,17 @@ def appendList(arr):
 def reverseList(arr):
     pass
 
-
 if __name__ == "__main__":
     n = int(input())
+    res = []
     for _ in range(n):
         arr = input().split(' ')
+        print('arr-> ', arr)
         if arr[0] == 'insert':
-            insertList(arr[1:])
+            a1, a2 = arr[1], arr[2]
+            res.append(insertList(int(a1), int(a2)))
         if arr[0] == 'print':
-            print('print')
+            print(res)
         if arr[0] == 'remove':
             print('remove')
         if arr[0] == 'append':
