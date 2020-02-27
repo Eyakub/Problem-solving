@@ -1,39 +1,41 @@
 def insertList(a1, a2):
-    return res.insert(a1, a2)
+    val = arr_insert.insert(a1, a2)
+    return val
 
-def removeList(arr):
-    pass
+def removeList(r1):
+    return arr_insert.remove(r1)
 
-def popList(arr):
-    pass
+def popList(arr_insert):
+    return arr_insert.pop()
 
-def sortList(arr):
-    pass
+def sortList(arr_insert):
+    return arr_insert.sort()
 
-def appendList(arr):
-    pass
+def appendList(a1):
+    arr_insert.append(a1)
 
-def reverseList(arr):
-    pass
+def reverseList(arr_insert):
+    arr_insert.reverse()
 
+
+arr_insert = []
 if __name__ == "__main__":
     n = int(input())
-    res = []
     for _ in range(n):
         arr = input().split(' ')
-        print('arr-> ', arr)
         if arr[0] == 'insert':
-            a1, a2 = arr[1], arr[2]
-            res.append(insertList(int(a1), int(a2)))
+            a1, a2 = int(arr[1]), int(arr[2])
+            insertList(a1, a2)
         if arr[0] == 'print':
-            print(res)
+            print(arr_insert)
         if arr[0] == 'remove':
-            print('remove')
+            r1 = int(arr[1])
+            removeList(r1)
         if arr[0] == 'append':
-            pass
+            appendList(int(arr[1]))
         if arr[0] == 'sort':
-            pass
+            sortList(arr_insert)
         if arr[0] == 'pop':
-            pass
+            popList(arr_insert)
         if arr[0] == 'reverse':
-            pass
+            reverseList(arr_insert)

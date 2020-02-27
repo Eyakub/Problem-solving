@@ -1,0 +1,9 @@
+SELECT * from CITY where POPULATION > 100000 AND COUNTRYCODE = 'USA';
+
+SELECT * FROM CITY where ID=1661
+
+select name from city where countrycode='JPN';
+
+select distinct city from station where (ID % 2) = 0;
+
+# Weather Observation Station 4
