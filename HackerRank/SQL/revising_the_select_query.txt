@@ -7,3 +7,5 @@ select name from city where countrycode='JPN';
 select distinct city from station where (ID % 2) = 0;
 
 # Weather Observation Station 4
+select count(city) - count(distinct city) from station;
+
