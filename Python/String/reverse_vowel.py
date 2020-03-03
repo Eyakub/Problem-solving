@@ -19,12 +19,14 @@ def reverseVowel(string):
             vowel[j] = string[i]
             print('vowel[j]...', vowel[j])
             j += 1
-
+            
+    # when we find the vowel, pass the reverse vowel
     for i in range(len(string)):
         if isVowel(string[i]):
             j -= 1
             string[i] = vowel[j]
-
+    
+    # converting list to string
     return ''.join(string)
 
 
