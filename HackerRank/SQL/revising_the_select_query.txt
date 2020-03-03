@@ -9,3 +9,38 @@ select distinct city from station where (ID % 2) = 0;
 # Weather Observation Station 4
 select count(city) - count(distinct city) from station;
 
+# weather Observation station 5
+SELECT top 1 CITY, LENGTH(CITY) as city_len from STATION order by city_len asc, CITY asc LIMIT 1;
+select CITY, length(CITY) as city_len from STATION order by city_len desc, CITY asc LIMIT 1;
+
+# weather Observation station 6
+SELECT distinct CITY from STATION where CITY rlike '^[aeiouAEIOU].*[aeiouAEIOU]$';
+
+SELECT CITY
+FROM STATION
+WHERE CITY Like 'A%' OR  CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%';
+
+# weather Observation station 8
+# start and end with vowels
+SELECT distinct CITY
+FROM STATION
+WHERE (CITY Like 'A%' OR  CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%') AND (CITY Like '%A' OR  CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U');
+
+# weather Observation station 9
+# not start with vowels
+SELECT distinct CITY
+FROM STATION
+WHERE NOT (CITY Like 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%');
+
+# weather Observation station 11
+# dont start or end with vowels
+SELECT distinct CITY
+FROM STATION
+WHERE NOT (CITY Like 'A%' OR  CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%') OR NOT (CITY Like '%A' OR  CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U');
+
+# weather Observation station 12
+# don't start and end with vowels
+SELECT distinct CITY
+FROM STATION
+WHERE NOT (CITY Like 'A%' OR  CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%') AND NOT (CITY Like '%A' OR  CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U');
+
