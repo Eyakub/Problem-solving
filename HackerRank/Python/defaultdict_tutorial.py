@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/defaultdict-tutorial/problem
+
 from collections import defaultdict
 
 n, m = map(int, input().split())
@@ -10,7 +12,7 @@ index = 0
 
 for i in A:
     d[i].append(A.index(i, index) + 1)
-    print(d)
+    print(A.index(i, index))
     index += 1
 for i in B:
     if i not in A:
