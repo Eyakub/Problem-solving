@@ -8,6 +8,8 @@ ehthumbs.db
 *.exe
 *.out
 
+CPP/*.h
+CPP/*.exe
 # Folder config file
 Desktop.ini
 
