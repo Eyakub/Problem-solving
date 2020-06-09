@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 Pseudocode
-for i = 0 to n
+for i = 1 to n
     key = A[i]
     j = i - 1
     while j >= 0 and A[j] > key
@@ -19,7 +19,16 @@ void insertionSort(int arr[], int length);
 void display(int arr[], int length);
 
 int main(){
-    int arr[] = {4, 6, 3, 1, 9, 7};
+    // int arr[] = {4, 6, 3, 1, 9, 7};
+    int sizeofarray;
+    cout << "Enter the array length: ";
+    cin >> sizeofarray;
+    
+    int arr[sizeofarray];
+
+    for (int i = 0; i < sizeofarray; i++){
+        cin >> arr[i];
+    }
     int length_arr = sizeof(arr)/sizeof(arr[0]);
     
     insertionSort(arr, length_arr);
@@ -35,9 +44,12 @@ void insertionSort(int arr[], int length){
         int j = i-1;        // this is for checking still the last iteration
 
         while (j >= 0 && arr[j] > key){     // first iter -> (4 > 6)
+            // moving the right side element to the one position backword
+            // until it reaches to the correct position
             arr[j+1] = arr[j];
             j--;
         }
+        // moving current elemen tto its currect position
         arr[j+1] = key;
     }
 
