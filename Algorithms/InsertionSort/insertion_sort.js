@@ -2,11 +2,8 @@ insertion_sort = (arr) => {
     for(let i = 1; i < arr.length; i++){
         // get the 2nd index value 
         let key = arr[i];
-        console.log('key----->', key)
-        console.log('arr-> ', arr)
         // first index value of array
         let j = i-1;
-        console.log('j: ', j, ' ', 'ar[j] > key: ', arr[j], '>', key)
         while (j >= 0 && arr[j] > key){
             // moving the right side element to one position backword, 
             // until it reaches to the correct position
