@@ -1,1 +1,0 @@
-print('I Love you\n' * 100)
