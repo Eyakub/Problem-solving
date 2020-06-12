@@ -6,6 +6,8 @@ flag <- 0
             swap(a[i], a[i+1])
             flag <- 1
     if flag==0 break
+
+Comparing value between adjucent elements, means next to values
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -13,19 +15,19 @@ using namespace std;
 void bubble_sort(int arr[], int length);
 
 int main(){
-    int arr[] = {5, 4, 3, 6, 7, 1};
-    // int sizeofarray;
-    // cout << "Enter the array length: ";
-    // cin >> sizeofarray;
+    // int arr[] = {5, 4, 3, 6, 7, 1};
+    int sizeofarray;
+    cout << "Enter the array length: ";
+    cin >> sizeofarray;
     
-    // int arr[sizeofarray];
+    int arr[sizeofarray];
 
-    // for (int i = 0; i < sizeofarray; i++){
-    //     cin >> arr[i];
-    // }
+    for (int i = 0; i < sizeofarray; i++){
+        cin >> arr[i];
+    }
     int length_arr = sizeof(arr)/sizeof(arr[0]);
 
-    bubble_sort(arr, length_arr)
+    bubble_sort(arr, length_arr);
 }
 
 void bubble_sort(int arr[], int length){
