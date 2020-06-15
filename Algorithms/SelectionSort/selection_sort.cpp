@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
-left side <= pivot and right side > pivot
-*/
 
 void selection_sort(int A[], int len);
 
