@@ -19,6 +19,9 @@ if __name__ == "__main__":
     selection_sort(arr, len(arr))
 
 """
+everytime when it got a lower value, changes the index to the lower value
+
+
 min-index->  0
 j->  1
 j->  2
