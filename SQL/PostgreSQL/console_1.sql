@@ -144,3 +144,16 @@ FROM order_order;
 
 
 -- arrange rows in group
+-- find the lowest quantity for each product_id in the inventory
+select sku, name,
+       MAX(quantity), quantity_allocated
+from product_productvariant
+GROUP BY id;
+
+
+-- filter groups based on condition
+-- confused??????????????????????
+select id, sku, MAX(quantity)
+FROM product_productvariant
+GROUP BY id
+having count(quantity) < 3;
