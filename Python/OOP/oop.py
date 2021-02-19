@@ -76,6 +76,8 @@ class Developer(Employee):
         super().__init__(first, last, pay)
         self.prog_lang = prog_lang
 
+    def __add__(self, other):
+        return self.pay + other.pay
 
 
 class Manager(Employee):
@@ -100,12 +102,15 @@ class Manager(Employee):
             print('--->', emp.fullname())
 
 
+    
 emp_1 = Employee('Eyakub', 'Sorkar', 50000)
 dev_1 = Developer('Oyshi', 'Tabassum', 60000, 'Python')
-dev_2 = Developer('Aditi', 'Tabassum', 60000, 'Python')
+dev_2 = Developer('Aditi', 'Tabassum', 70000, 'Python')
 
 mgr_1 = Manager('Eyakub', 'Sorkar', 90000, [dev_1])
 
+# this is like object.__add__(1, 2)
+print(dev_1 + dev_2)
 # print(mgr_1.email)
 # mgr_1.add_employee((dev_2))
 # mgr_1.print_employees()
