@@ -69,8 +69,50 @@ class Employee:
         return True
 
 
+class Developer(Employee):
+    raise_amount = 1.10
+    
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        self.prog_lang = prog_lang
+
+
+
+class Manager(Employee):
+    
+    def __init__(self, first, last, pay, employees=None):
+        super().__init__(first, last, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
+    
+    def add_employee(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def remove_employee(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+    
+    def print_employees(self):
+        for emp in self.employees:
+            print('--->', emp.fullname())
+
+
 emp_1 = Employee('Eyakub', 'Sorkar', 50000)
-emp_2 = Employee('Oyshi', 'Tabassum', 60000)
+dev_1 = Developer('Oyshi', 'Tabassum', 60000, 'Python')
+dev_2 = Developer('Aditi', 'Tabassum', 60000, 'Python')
+
+mgr_1 = Manager('Eyakub', 'Sorkar', 90000, [dev_1])
+
+# print(mgr_1.email)
+# mgr_1.add_employee((dev_2))
+# mgr_1.print_employees()
+
+print(isinstance(mgr_1, Manager))
+print(issubclass(Manager, Employee))
+print(issubclass(Manager, Developer))
 
 # emp_str_1 = "Eyakub-Sorkar-70000"
 # emp_str_2 = "Oyshi-Tabassum-6000"
@@ -80,7 +122,7 @@ emp_2 = Employee('Oyshi', 'Tabassum', 60000)
 # print(Employee.raise_amount)
 # print(new_emp_1.email)
 
-import datetime
-my_date = datetime.date(2019, 8, 22)
-print(Employee.is_workday(my_date))
+# import datetime
+# my_date = datetime.date(2019, 8, 22)
+# print(Employee.is_workday(my_date))
 
