@@ -7,6 +7,10 @@ ehthumbs.db
 *.o
 *.exe
 *.out
+*.com
+*.class
+*.dll
+*.so
 
 CPP/*.h
 CPP/*.exe

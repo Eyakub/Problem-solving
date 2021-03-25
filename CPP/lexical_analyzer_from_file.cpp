@@ -22,59 +22,61 @@ int isKeywords(char buffer[])
     return flag;
 }
 
-bool arePair(char opening, char closing)
-{
-    if(opening == '(' && closing == ')') return true;
-    else if(opening == '{' && closing == '}') return true;
-    else if(opening == '[' && closing == ']') return true;
-    return false;
-}
-
-bool areParanthesesBalanced(string word)
-{
-    stack<char> st;
-    for(int i = 0; i < word.length(); i++)
-    {
-        if(word[i] == '(' || word[i] == '{' || word[i] == '[')
-        {
-            st.push(word[i]);
-        }
-        else if(word[i] == ')' || word[i] == '}' || word[i] == ']')
-        {
-            if(st.empty() || !arePair(st.top(), word[i])) return false;
-            else st.pop();
-        }
-        return st.empty() ? true:false;
-    }
-}
-
 int main()
 {
-    string str;
-    char buffer[20], operators[] = "+-*/%=<>", ch;
-    int i, j, k = 0;
+    char ch, buffer[20], operators[] = "+-*/%=<>";
+    char opening, closing;
+    int i, j, k = 0, l;
 
-    cout << "Please enter a string: ";
-    getline(cin, str);
+    ifstream file;
+    file.open("input.txt");
 
-    for (i = 0; i < str.size(); i++)
+    if (!file.is_open())
     {
-        ch = str[i];
+        cout << "Error while opening the file\n";
+        exit(0);
+    }
+
+    while (!file.eof())
+    {
+        ch = file.get();
 
         // as operator has 8 size of character
         for (j = 0; j < 8; ++j)
         {
             if (ch == operators[j])
-            {
-                cout << str[i] << " is an Operator" << endl;
-            }
+                cout << ch << " is an Operator" << endl;
         }
+
+        // immediate parantheses check
+        if (ch == '(' || ch == '{' || ch == '[')
+        {
+            opening = ch;
+            continue;
+        }
+        if (ch == ')' || ch == '}' || ch == ']')
+        {
+            closing = ch;
+            if (opening == '(' && closing == ')')
+                cout << "()"
+                     << " is Parantheses" << endl;
+            else if (opening == '{' && closing == '}')
+                cout << "{}"
+                     << " is Parantheses" << endl;
+            else if (opening == '[' && closing == ']')
+                cout << "[]"
+                     << " is Parantheses" << endl;
+            continue;
+        }
+
+        // checking for semicolon
+        if (ch == ';')
+            cout << "; "
+                 << "is End of a line";
 
         // checking if a character is a valid digit or alphabet
         if (isalnum(ch))
-        {
             buffer[k++] = ch;
-        }
 
         // if word got space or new line or a value means j should be more than 1
         else if ((ch == ' ' || ch == '\n') && (k != 0))
@@ -83,15 +85,10 @@ int main()
             buffer[k] = '\0';
             k = 0;
             if (isKeywords(buffer) == 1)
-            {
                 cout << buffer << " is keyword" << endl;
-            }
             else
-            {
                 cout << buffer << " is identifier" << endl;
-            }
         }
-        else if((ch == ')'))
     }
     return 0;
 }
