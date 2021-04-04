@@ -4,7 +4,7 @@
 def anagramCheck(word1, word2):
     if len(word1) != len(word2):
         print('No')
-    else if(sorted(word1) == sorted()):
+    elif(sorted(word1) == sorted(word2)):
         print('Yes')
     else:
         print('No')

@@ -11,7 +11,9 @@ def characterFrequency(str):
             # if new key as dict doesn't carry duplicate so every keys
             # will be unique and set 1 for the first time
             dicti[i] = 1
-    return dicti        
+    str = ",".join(dicti.items())
+    return str
+
 
 if __name__ == "__main__":
     # str = input()
