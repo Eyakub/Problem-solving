@@ -1,5 +1,3 @@
-// https://www.hackerrank.com/challenges/30-operators/problem
-
 package main
 
 import (
@@ -13,7 +11,7 @@ import (
 )
 
 
-func solve(meal_cost float64, tip_percent float64, tax_percent float64){
+func solve(meal_cost float64, tip_percent int32, tax_percent int32){
 	res := meal_cost + meal_cost * float64(tip_percent)/100.0 + meal_cost * float64(tax_percent)/100.0
 	fmt.Println(int32(math.Round(res)))
 }
@@ -24,11 +22,11 @@ func main(){
 	meal_cost, err := strconv.ParseFloat(strings.TrimSpace(readLine(reader)), 64)
 	checkError(err)
 
-	tip_percentTemp, err := strconv.ParseFloat(strings.TrimSpace(readLine(reader)), 10, 64)
+	tip_percentTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
 	tip_percent := int32(tip_percentTemp)
 
-	tax_percentTemp, err := strconv.ParseFloat(strings.TrimSpace(readLine(reader)), 10, 64)
+	tax_percentTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
 	tax_percent := int32(tax_percentTemp)
 
