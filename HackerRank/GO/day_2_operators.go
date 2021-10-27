@@ -1,8 +1,12 @@
+// https://www.hackerrank.com/challenges/30-operators/problem
+
 package main
 
 import (
 	"bufio"
+	"fmt"
 	"io"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -10,7 +14,8 @@ import (
 
 
 func solve(meal_cost float64, tip_percent float64, tax_percent float64){
-
+	res := meal_cost + meal_cost * float64(tip_percent)/100.0 + meal_cost * float64(tax_percent)/100.0
+	fmt.Println(int32(math.Round(res)))
 }
 
 func main(){
