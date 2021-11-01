@@ -26,7 +26,6 @@ func main() {
 		arr = append(arr, arrItem)
 	}
 	res := reverse(arr)
-	// fmt.Println(res)
 	fmt.Println(strings.Trim(strings.Join(strings.Split(fmt.Sprint(res), " "), " "), "[]"))
 	// s, _ := json.Marshal(res)
 	// fmt.Println(strings.Trim(string(s), "[]"))
