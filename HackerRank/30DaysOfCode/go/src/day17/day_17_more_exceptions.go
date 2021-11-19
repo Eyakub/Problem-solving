@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"errors"
 	"fmt"
 	"io"
 	"math"
@@ -16,11 +15,11 @@ type Calculator struct {
 	p int64
 }
 
-func (c Calculator) power() (int64, error) {
+func (c Calculator) power() (int64, string) {
 	if c.n < 0 || c.p < 0 {
-		return 0, errors.New("n and p should be non-negative")
+		return 0, "n and p should be non-negative"
 	} else {
-		return int64(math.Pow(float64(c.n), float64(c.p))), nil
+		return int64(math.Pow(float64(c.n), float64(c.p))), ""
 	}
 }
 
@@ -51,7 +50,10 @@ func main() {
 		fmt.Scanf("%d %d", &n, &p)
 		calculate := Calculator{n, p}
 		result, err := calculate.power()
-		checkError(err)
-		fmt.Println(result)
+		if err != "" {
+			fmt.Println(err)
+		} else {
+			fmt.Println(result)
+		}
 	}
 }
