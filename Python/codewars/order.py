@@ -10,7 +10,6 @@ def order1(sentence):
 
 
 def order(sentence):
-    print('==sorted==', sorted(sentence.split(), key=lambda x: x.split()))
     return ' '.join(sorted(sentence.split(), key=lambda w:sorted(w)))
 
 
