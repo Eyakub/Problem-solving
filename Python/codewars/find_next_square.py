@@ -4,7 +4,7 @@ import math
 
 def find_next_square(sq):
     # nextN = math.floor(math.sqrt(sq)) + 1
-    # print(nextN * nextN)
+    
     if (math.sqrt(sq)).is_integer():
          return int(math.sqrt(sq) + 1) **  2
     else:
