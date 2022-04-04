@@ -1,24 +1,14 @@
-def format_name(first_name, last_name):
-	string = ''
-	if first_name=='Ernest' and last_name=='Hemingway':
-		string = 'Name: ' + first_name + ', ' + last_name
-	elif first_name=='' and last_name=='Madonna':
-		string = 'Name: ' + last_name
-	elif first_name=='' and last_name=='':
-		string = ''
-	elif first_name=='Voltaire' and last_name=='':
-		string = 'Name: ' + first_name
-	
-	return string 
+import matplotlib.pyplot as plt
+import numpy as np
 
-print(format_name("Ernest", "Hemingway"))
-# Should return the string "Name: Hemingway, Ernest"
 
-print(format_name("", "Madonna"))
-# Should return the string "Name: Madonna"
+def test():
+	y = np.array([35, 25, 25, 15])
+	mylabels = ['Python', 'Django', 'ReactJS', 'JavaScript']
 
-print(format_name("Voltaire", ""))
-# Should return the string "Name: Voltaire"
+	myexplode = [.2, 0, 0, 0]
+	plt.pie(y, labels=mylabels, explode=myexplode, shadow=True)
+	plt.show()
 
-print(format_name("", ""))
-# Should return an empty string
+
+test()

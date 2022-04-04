@@ -60,3 +60,9 @@ Temporary Items
 .vscode
 .idea
 go.mod
+
+# virtualenv
+/venv
+./venv
+/venv/*
+./venv/*
