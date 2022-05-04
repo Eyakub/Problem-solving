@@ -9,7 +9,6 @@ def printGrid(grid):
 def setGrid(grid, row, col):
     row = ord(row) - 49
     col = ord(str(col)) - 65
-    print(row, col)
     grid[row][col] = 1
 
 
