@@ -7,7 +7,7 @@ this way...
 def bubble_sort(arr, length):
     for i in range(length):
         flag = False
-        for j in range(0, length-2):
+        for j in range(0, length-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 flag = True
