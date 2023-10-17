@@ -1,9 +1,8 @@
 def solution(arr):
-    print("Arr: ", arr)
     ans = map(
         lambda sub_arr: [x**x for x in sub_arr if x > 0], arr
     )
-    return arr
+    return ans
 
 
 if __name__ == '__main__':
