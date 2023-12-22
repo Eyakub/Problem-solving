@@ -1,6 +1,5 @@
 # Reduce
 # we need: a function that takes 2 params, A sequence
-
 from functools import reduce
 
 
@@ -18,8 +17,10 @@ print(result)
 letters = list('abcde')
 print(letters)
 
+
 def rev(a: str, b: str) -> str:
     return b + a
+
 
 result1 = reduce(rev, letters)
 
@@ -27,4 +28,3 @@ result1 = reduce(rev, letters)
 # try using lambda
 result2 = reduce(lambda a, b: b+a, letters)
 print("Reverse using lambda: ", result2)
-
