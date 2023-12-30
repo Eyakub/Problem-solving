@@ -12,5 +12,4 @@ def check_anagrams():
     if cnt_1 == cnt_3:
         print('1 and 3 anagram')
 
-
 check_anagrams()
