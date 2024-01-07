@@ -10,4 +10,4 @@ def solution(nums, target):
                 print(i, j)
 
 
-solution([1, 2, 3, 2, 3, 4, 5, 6], 6)
+solution([2, 4, 3, 5, 6, -2, 4, 7, 8, 9], 7)
