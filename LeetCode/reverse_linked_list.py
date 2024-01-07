@@ -6,6 +6,9 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        pass
+
+
 if __name__ == '__main__':
     inp_list = [1, 2, 3, 4, 5]
     solution(inp_list)
