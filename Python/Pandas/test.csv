@@ -1,7 +1,7 @@
 gender,race,parental level,lunch,test preparation,math score,reading score,writing score
-female, group b, some college, standard, completed, 45, 34, 56
+female, group B, some college, standard, completed, 45, 34, 56
 female, group b, some college, standard, completed, 45, 36, 56
-male, group c, some college, standard, completed, 85, 46, 32
+male, group C, some college, standard, completed, 85, 46, 32
 male, group d, some uni, standard, completed, 85, 46, 32
 male, group e, high school, standard, completed, 85, 46, 32
 male, group f, uni, standard, completed, 85, 46, 32
