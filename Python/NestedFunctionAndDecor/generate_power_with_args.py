@@ -1,8 +1,8 @@
 def generate_power(exponent):
     def power(func):
         def inner_power(*args):
-            print('args->', args, func.__name__)
             base = func(*args)
+            print('args->', args, func.__name__, base)
             return base ** exponent
         return inner_power
     return power

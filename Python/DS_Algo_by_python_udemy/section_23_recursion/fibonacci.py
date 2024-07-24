@@ -13,4 +13,15 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 
-print(fibonacci(7))
+def fibonacci_iterative(n):
+    """ printing fib start to n-th """
+    fib_sequence = [0, 1]
+    for i in range(2, n):
+        fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])
+    return fib_sequence
+
+
+print("The Fibonacci numbers are:", fibonacci_iterative(10))
+
+
+# print(fibonacci(7))
