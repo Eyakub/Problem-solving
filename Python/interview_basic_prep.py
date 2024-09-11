@@ -46,7 +46,7 @@ def solution_sort_dict(dict1) -> tuple:
 
 
 dict1 = {5: "apple", 3: "Mango", 6: "Grapes", 8: "Banana"}
-# print(solution_sort_dict(dict1))
+print(solution_sort_dict(dict1))
 
 
 """
@@ -62,7 +62,7 @@ def solution_pair(lst, k):
                 print(f"Pair: [{lst[i]} {lst[j]}]")
 
 
-# solution_pair([2, 4, 6, 9, 1, 3, 5], 10)
+solution_pair([2, 4, 6, 9, 1, 3, 5], 10)
 
 
 """
