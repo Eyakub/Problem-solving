@@ -20,6 +20,7 @@ class Solution:
             if nums[i] != nums[i-1]:
                 # 2 == 2, jehetu next, prev same na tai +1 kore dekhtese sequence e ache kina
                 if nums[i] == nums[i-1] + 1:
+                    print("==>", nums[i], nums[i-1] + 1)
                     seq_count += 1
                 else:
                     # jodi sequence e na thake tahole longest nicche ar seq_count reset to 1
@@ -48,4 +49,4 @@ class Solution:
 
 
 sol = Solution()
-print(sol.longest_consecutive2([100, 4, 200, 201, 1, 3, 2]))
+print(sol.longest_consecutive([100, 4, 200, 201, 1, 3, 2]))

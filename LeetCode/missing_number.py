@@ -15,5 +15,5 @@ def solution(arr) -> int:
     return missing_num
 
 
-# print(solution([1, 2, 0, 3, 4, 6]))
-print(solution([0]))
+print(solution([9, 6, 4, 2, 3, 5, 7, 0, 1]))
+# print(solution([0]))
