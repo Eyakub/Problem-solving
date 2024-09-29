@@ -1,3 +1,17 @@
+"""
+Multithreading:
+Multithreading means running multiple threads (smaller units of processes) within the same process. It's like having multiple hands doing different tasks simultaneously, but all hands are part of the same person.
+
+Best for I/O-bound tasks: 
+Tasks that spend more time waiting (e.g., file I/O, network requests) benefit from multithreading. Examples include web scraping, file operations, or database queries.
+
+Memory efficient: Threads share the same memory space, making it lighter and more efficient for certain operations.
+
+GIL (Global Interpreter Lock) constraint: Python's GIL only allows one thread to execute at a time in the context of CPU-bound tasks. As a result, multithreading may not improve performance for CPU-intensive operations.
+
+Lower overhead: Creating and switching between threads is faster and requires less memory compared to processes.
+Example use cases: Web scraping, file reading/writing, network requests, input/output operations.
+"""
 import time
 import threading
 
