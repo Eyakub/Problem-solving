@@ -17,4 +17,4 @@ class Solution:
 
 if __name__ == '__main__':
     sol = Solution()
-    print(sol.removeElement([1, 1, 2, 2], 2))
+    print(sol.removeElement([1, 1, 2, 2, 3], 2))
