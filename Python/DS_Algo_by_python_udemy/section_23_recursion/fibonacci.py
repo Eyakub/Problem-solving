@@ -21,6 +21,13 @@ def fibonacci_iterative(n):
     return fib_sequence
 
 
+def fibonacci_while(n):
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+
+
 def fibonacci(n):
     assert n >= 0 and int(
         n) == n, 'Fibonacci number cannot be negative number or non integer.'

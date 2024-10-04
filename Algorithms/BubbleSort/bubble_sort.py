@@ -6,7 +6,7 @@ check with all adjucent element to swap
 this way...
 
 3, 4, 1, 5, 2 (len = 5)
-i = 0:
+i = 0:  len(5-0-1) = 4
     j = 0: 3 > 4 (no swap, flag False)  => 3, 4, 1, 5, 2
     j = 1: 4 > 1 (swap, flag True)      => 3, 1, 4, 5, 2
     j = 2: 3 > 5 (no swap, flag True)   => 3, 1, 4, 5, 2
@@ -27,6 +27,11 @@ i = 3: len(5-3-1) = 1
 
 
 def bubble_sort(arr, length):
+    """
+    TC: O(n^2)
+    SC: O(1)
+    as after each iteration of the inner loop, the largest element is bubbled to the end of the array. that's why we are using length-i-1 to reduce the number of iterations of the inner loop.
+    """
     for i in range(length):
         # flag = False
         for j in range(0, length-i-1):
